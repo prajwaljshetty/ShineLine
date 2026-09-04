@@ -1,0 +1,1072 @@
+/*--ROOT-*/ 
+/* #region  */
+:root {
+    --Primary: #ffffff;
+    --Secondary: #0c2457;
+    --Accent: #e61d29;
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--Primary);
+    font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 28px;
+    margin: 0;
+    padding: 0;
+    transition: all 1s;
+    user-select: none;
+}
+
+body {
+    animation: fadeIn 1s forwards;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+/* #endregion */
+
+/*--HEADER SECTION--*/ 
+/* #region */
+header {
+    background-color: var(--Secondary);
+    display: flex;
+    padding: 0.6rem 1rem;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+.Info-List, .Icon-List {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.Info-List {
+    margin-left: 14.5%;
+    margin-right: 13.2%;
+}
+
+.Info-List li {
+    align-items: center;
+    display: flex;
+    margin: 0 1.5rem;
+}
+
+.Info-List span {
+    border-right: 1px solid rgba(128, 128, 128, 0.459);
+    padding: 0.1rem 1.05rem;
+}
+
+.Info-List span.Last-List-item { 
+    border-right: none;
+}
+
+.Icon-List i {
+    font-size: 1.1rem;
+    margin-left: 1.1rem;
+}
+/* #endregion */
+
+/*--NAVIGATION SECTION--*/ 
+/* #region  */
+#Nav1 {
+    background-color: var(--Primary);
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    position: relative;
+    width: 74%;
+    z-index: 1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+nav .Logo {
+    color: var(--Secondary);
+    text-transform: uppercase;
+    font-family: 'Orbitron', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    font-size: 2rem;
+    width: 300px;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+#Nav1 .Nav-List {
+    display: flex;
+    list-style: none;
+    padding: 1.8rem 1rem;
+}
+
+#Nav1 li {
+    margin: 0 0.6rem;
+}
+
+#Nav1 a {
+    color: var(--Secondary);
+    y: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#Nav1 a:hover {
+    color: var(--Accent);
+}
+
+.C-Button {
+    position: relative;
+    background-color: var(--Accent);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    height: 40px;
+    width: 150px;
+    transition: background-color 1s ease;
+}
+
+.fa-bars {
+    position: absolute;
+    color: var(--Secondary);
+    font-size: 2rem;
+    top: 1.7rem;
+    right: 2%;
+    z-index: 100;
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+/*--MOBILE NAVIGATION (#Nav2)--*/
+#Nav2 {
+    position: fixed;
+    z-index: 1;
+    width: 50%;
+    height: 100%;
+    right: -100%;
+    overflow: hidden;
+    display: none;
+    transition: all 0.3s ease;
+    background-color: var(--Secondary);
+}
+
+#Nav2 .Logo{
+    color: var(--Primary);
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    width: fit-content;
+    transition: none;
+}
+
+#Nav2 a {
+    color: var(--Primary);
+    font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#Nav2 .Nav-List-Wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+#Nav2 .Nav-List {
+    position: relative;
+    list-style: none;
+}
+
+#Nav2 .Nav-List li {
+    padding: 1rem;
+}
+
+#Close {
+    position: fixed;
+    right: 1rem;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--Primary);
+    background-color: transparent;
+    font-size: 1.5rem;
+    line-height: 32px;
+    border-radius: 50%;
+    color: var(--Primary);
+    cursor:pointer;
+    text-align: center;
+    z-index: 1000;
+}
+/* #endregion */
+
+/*--SLIDER SECTION -*/ 
+/* #region */
+.SliderWrapper {
+    background-color: var(--Secondary);
+    height: 85vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin-top: -110px;
+}
+
+#Slider {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+#Slider h1{
+    position:absolute;
+    width: 700px;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.9rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    line-height: 3rem;
+    margin-top: 20%;
+    margin-left: 16.5%;
+    animation: In 1s ease-in-out;
+}
+
+#Slider img {
+    height: 100%;
+    object-fit: cover;
+    image-rendering: auto;
+    position: absolute;
+    transition: opacity 1s ease-out;
+    width: 100%;
+}
+
+#IMG1 {
+     opacity: 1;
+     }
+#IMG2, #IMG3 { 
+    opacity: 0; 
+}
+
+.SliderControls {
+    bottom: 2rem;
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 2rem;
+}
+
+.SliderControls button {  
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 200;
+    transition: color 1s ease;
+}
+
+.SliderControls button:hover {
+    color: var(--Accent);
+}
+
+.C-Container {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 32rem auto;
+    margin-left: 18.5rem;
+    padding: rem;
+    position: relative;
+    width: 25%;
+}
+
+.C-Container .C-Button2, .R-Button {
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding: 0.4rem 0.8rem;
+    width: 48%;
+    transition: background-color 1s ease;
+}
+
+.C-Container .C-Button2 {
+    background-color: var(--Accent);
+    border: none;
+    animation: In 1s ease-out;
+}
+
+.C-Container .R-Button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    animation: In .5s ease-out;
+}
+
+.C-Button:hover, .C-Button2:hover {
+    background-color: var(--Secondary);
+    color: var(--Primary);
+}
+
+.C-Container .R-Button:hover {
+    background-color: var(--Accent);
+    border-color: var(--Accent);
+    color: var(--Primary);
+}
+
+.C-Container i{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+@keyframes In {
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* #endregion */
+
+/*--MINDSET SECTION--*/ 
+/* #region */
+.Mindsets-wrapper {
+    margin: 3rem auto;
+    padding: 2rem 1rem;
+    width: 80%;
+    overflow: hidden;
+}
+
+.Mindsets-wrapper ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.Mindsets-wrapper li {
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    overflow: hidden;
+    width: 30%;
+}
+
+.Mindsets-wrapper .Canvas {
+    background: url(/Users/prajwal/Downloads/Studies/Intership/ShineLineProject/ASSETS/Vector1.svg) no-repeat;
+    background-size: cover;
+    height: 120px;
+    margin: -5rem -1.5rem 0 auto;
+    opacity: 0.1;
+    transition: opacity 1s ease-out;
+    width: 100px;
+    height: 120px;
+}
+
+.Mindsets-wrapper li:hover .Canvas {
+    opacity: 1;
+}
+
+.Mindsets-wrapper img {
+    height: 60px;
+    margin-bottom: 1rem;
+    width: 60px;
+}
+
+.Mindsets-wrapper h3 {
+    color: var(--Secondary);
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    text-transform: uppercase;
+}
+
+.Mindsets-wrapper p {
+    color: #333;
+    line-height: 1.6;
+}
+/* #endregion */
+
+/*--ABOUT SECTION--*/
+/* #region */
+.About-Company {
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    margin: 3rem auto;
+    padding: 2rem;
+    width: 80%;
+}
+
+.About-Company img {
+    max-width: 30%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.About-Company-Text h2 {
+    color: var(--Accent);
+    font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans';
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    word-wrap: break-word;
+}
+
+.About-Company-Text h1 {
+    color: var(--Secondary);
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    word-wrap: break-word;
+}
+
+.About-Company-Text p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.h2-Wrapper ul {
+    list-style: none;
+    padding: 0;
+}
+
+.h2-Wrapper li {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.h2-Wrapper img {
+    height: 60px;
+    width: 60px;
+    margin-top: -1rem;
+}
+/* #endregion */
+
+/*--GALLERY SECTION--*/
+/* #region*/
+.Gallery-Wrapper {
+    background-color: rgba(0, 0, 0, 0.056);
+    margin: 3rem 0 0;
+    padding: 3rem 1rem;
+    width: 100%;
+    text-align: center;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    padding: .5rem;
+}
+
+.Gallery-Wrapper p{
+    color: var(--Accent);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem;
+    height: 1rem;
+}
+
+.Gallery-Wrapper h2{
+    color: var(--Secondary);
+    font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans';
+    font-size: 4rem;
+    font-weight: 600;
+    height: 4rem;
+    line-height: 4rem;
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+}
+
+
+.Image-Wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50%;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.Image-Wrapper img{
+    width: 23%;
+    height: auto;
+    object-fit: cover;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+/* #endregion */
+
+/*--USP SECTION --*/
+/* #region */
+.USP-Wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    word-wrap: break-word;
+    padding: 2rem;
+    margin-top: 5rem;
+}
+
+.USP-Wrapper div {
+    width: 40%;
+    padding: 1rem;
+}
+
+.USP-Wrapper .USP-Head {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #000;
+}
+
+.USP-Wrapper p {
+    color: #555;
+}
+
+.USP-Wrapper h2{
+    color: var(--Secondary);
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.USP-Wrapper span {
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 510;
+    color: #333;
+}
+
+.USP-Wrapper .Our-USP img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.Why-Us .USP-Head{
+    margin-left: 2.8rem;
+}
+
+.USP-Wrapper ul {
+    list-style: none;
+}
+
+.USP-Wrapper .USP-List li::before{
+    content: "\f058";
+    font-family: "Font Awesome 6 Free";
+    color: var(--Accent);
+}
+
+.Why-Us ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.Why-Us li {
+    width: 46%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Why-Us li img {
+    position: relative;
+    width: 60%;
+    top:-20%;
+    left:-22%;
+}
+/* #endregion */
+
+/*--ACHIEVEMNT SECTION--*/
+/* #region */
+.Achievement-Wrapper{
+    width: 77%;
+    height: 20vh;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin:auto;
+}
+
+.Achievement-Wrapper .Outer-div{
+    display: flex;
+}
+
+.Achievement-Wrapper .Outer-div div{
+    padding: 1rem;
+}
+
+.Achievement-Wrapper h2,p{
+    color: black;
+    font-family: 'Poppins';
+}
+
+.Achievement-Wrapper h2{
+    font-size: 2rem;
+}
+
+.Achievement-Wrapper .Outer-div img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    padding: 1rem;
+    background-color: var(--Accent);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+/* #endregion */
+
+/*--FOOTER SECTION--*/
+/* #region*/
+.Footer-Wrapper{
+    position: relative;
+    width: 100%;
+    background-color: var(--Secondary);
+    bottom: 0;
+    flex-wrap: wrap;
+    padding: 3rem;
+    word-wrap: break-word;
+}
+
+.Footer-Wrapper .Outer-List{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Footer-Wrapper ul{
+    list-style: none;
+}
+
+.Footer-Wrapper .Inner-List{
+    padding: .5rem;
+}
+
+.Footer-Wrapper h2{
+    font-size: 1.5rem;
+    font-family: 'Poppins';
+}
+
+.Footer-Wrapper li{
+    margin-top: 1rem;
+    padding: .1rem;
+}
+
+.Footer-Wrapper .Footer-Icon-List{
+    margin-left: -1.3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Footer-Wrapper .Footer-Icon-List li{
+    font-size: 1.3rem;
+    background-color: #ffffff3a;
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    padding: .1rem;
+    padding-left: .65rem;
+    line-height: 2.5rem;
+    box-sizing: border-box;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.Footer-Wrapper .Footer-Icon-List li:hover{
+    background-color: var(--Accent);
+    transition: all 0.3 ease;
+}
+
+.Inner-List a{
+   text-decoration: none;
+}
+
+.Inner-List a:hover{
+    margin-left: 10%;
+}
+
+.Inner-List ul.Contact-List{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Inner-List ul.Contact-List li{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    flex-direction: column;
+}
+
+.Footer-Wrapper .Credit-List{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.Credit-List a{
+    text-decoration: none;
+    color: var(--Accent);
+}
+/* #endregion */
+
+/*--MEDIA QUERIES--*/
+/* #region */
+/* #region MEDIA QUERIES[1430px] */
+@media (max-width: 1430px) {
+    /*--HEADER SECTION--*/
+    .Info-List { 
+        margin-left: 8%; 
+    }
+
+    /*--NAVIGATION SECTION--*/
+    #Nav1 {
+        width: 90%;
+    }
+
+    .fa-bars,#Close{
+        display: none;
+    }
+
+    /*--SLIDER SECTION--*/
+    .C-Container{
+        margin-left: 14rem;
+    }
+}
+/* #endregion */
+
+/* #region MEDIA QUERIES[1250]*/
+@media (max-width: 1250px) {
+    /*--HEADER SECTION--*/
+    .Info-List { 
+        margin-left: 4%; 
+    }
+
+    .Info-List li { 
+        margin: 0 .4rem; 
+    }
+
+    .Info-List span { 
+        padding: 0.1rem 0.6rem; 
+    }
+
+    .Icon-List i {
+        margin-left: .8rem;
+    }
+
+    /*--NAVIGATION SECTION--*/
+    #Nav1 {
+        width: 100%;
+    }
+
+    /*--SLIDER SECTION--*/
+    #Slider h1 {
+        font-size: 2.4rem;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    /*--USP SECTION --*/
+    .USP-Wrapper {
+        flex-direction: column;
+        align-content: center;
+    }
+    
+    .USP-Wrapper div {
+        width: 80%;
+    }
+}
+/* #endregion */
+
+/* #region MEDIA QUERIES[1100]*/
+@media (max-width: 1100px) {
+    /*--HEADER SECTION--*/
+    .Info-List { 
+        margin-left: 2%; 
+        margin-right: 10%;
+    }
+    .Icon-List i {
+        margin-left: .8rem;
+    }
+    /*--SLIDER SECTION--*/
+    .C-Container{
+        flex-direction: column;
+        width: 100%;
+    }
+    /*GALLERY SECTION*/
+    .Gallery-Wrapper h2{
+        font-size: 3rem;
+    }
+}
+/* #endregion */
+
+/* #region MEDIA QUERIES[945]*/
+@media (max-width: 945px) {
+    /*--HEADER SECTION--*/
+    header { 
+        display: none; 
+    }
+
+    /*--NAVIGATION SECTION--*/
+    #Nav1 .Nav-List{
+        display: none;
+    }
+
+    #Nav1{
+        justify-content: center;
+    }
+
+    #Nav1 div{
+        font-size: 2rem;
+        padding: 2rem .1rem;
+        width: 40%;
+    }
+
+    #Nav1 .C-Button {
+    font-weight: 600;
+    height: 40px;
+    width: 140px;
+    }
+
+    #Nav2 {
+        display: block;
+    }
+
+    .fa-bars {
+        display: block;
+    }
+
+    #Nav2 .Nav-List-Wrapper {
+        margin-right: 12%;
+        padding: 1rem 2rem;
+    }
+    
+    #Close {
+        top: 2rem;
+        right: 1rem;
+    }
+
+    /*--SLIDER SECTION--*/
+    .C-Container{
+        margin-top: 26rem;
+        width: 90%;
+        margin-left: 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .C-Container .C-Button2,
+    .C-Container .R-Button {
+        width: 100%;
+    }
+
+    /*--MINDSET SECTION--*/
+    .Mindsets-wrapper ul {
+        flex-direction: column;
+    }
+
+    .Mindsets-wrapper li {
+        width: 100%;
+    }
+
+    /*ABOUT SECTION--*/
+     .About-Company {
+        flex-direction: column;
+    }
+
+    .About-Company img {
+        max-width: 100%;
+        height: 550px;
+    }
+
+    .About-Company .About-Company-Text img{
+        max-width: 100%;
+        height: 60px;
+    }
+
+    /*GALLERY SECTION--*/
+    .Gallery-Wrapper .Image-Wrapper{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .Gallery-Wrapper .Image-Wrapper img{
+        width: 100%;
+        height: 150px;
+    }
+
+    /*USP SECTION--*/
+    .Why-Us .USP-Head{
+        margin-left: 0rem;
+    }
+
+    /*ACHIEVEMENTS SECTION--*/
+    .Achievement-Wrapper{
+        height: auto;
+    }
+
+    .Achievement-Wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Achievement-Wrapper div{
+        width: 80%;
+        justify-content: space-evenly;
+    }
+
+    .Achievement-Wrapper img{
+        width: 100px;
+    }
+}
+/* #endregion */
+
+/* #region MEDIA QUERIES[700]*/
+@media (max-width: 700px) {
+    /*--NAVIGATION SECTION--*/
+    #Nav1 div{
+        font-size: 1.5rem;
+        padding: 2rem .1rem;
+        width: 40%;
+    }
+
+    #Nav2 .Nav-List-Wrapper {
+        padding: 1.5rem 2rem;
+        word-wrap: break-word;
+    }
+
+    #Nav2 .Nav-List {
+        padding: 1rem;
+    }
+
+    #Nav2 .Nav-List li {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    #Close {
+        width: 28px;
+        height: 28px;
+        font-size: 1.2rem;
+        line-height: 28px;
+    }
+
+    /*--SLIDER SECTION--*/
+    #Slider h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 200px;
+        padding: 0.8rem;
+    }
+
+    /*--ABOUT SECTION--*/
+    .About-Company-Text h1 {
+        font-size: 2rem;
+    }
+
+    .About-Company .About-Company-Text li{
+        flex-direction: column;
+    }
+
+    /*--GALLERY SECTION--*/
+    .Gallery-Wrapper h2{
+        font-size: 2.5rem;
+    }
+
+    /*--USP SECTION--*/
+    .Why-Us ul {
+       flex-direction: column;
+    }
+
+    .Why-Us li {
+       width: 100%;
+       word-wrap: break-word;
+    }
+
+    .Why-Us li img{
+       width: 40%;
+       top: -1rem;
+    }
+
+    /*FOOTER SECTION--*/
+    .Footer-Wrapper .Outer-List{
+        flex-direction: column;
+    }
+}
+/* #endregion */
+
+/* #region MEDIA QUERIES[480]*/
+@media (max-width: 480px) {
+    /*--NAVIGATION SECTION--*/
+    #Nav1 div{
+        font-size: 1.1rem;
+        padding: 2rem .1rem;
+        width: 36%;
+    }
+
+    #Nav2 .Logo{
+        font-size: 1.1rem;
+    }
+
+    #Nav2 .C-Button{
+        width: 5rem;
+        
+    }
+
+    /*--SLIDER SECTION--*/
+    #Slider h1 {
+        font-size: 2rem;
+        width: fit-content;
+    }
+
+    .C-Container {
+        width: 90%;
+        margin-left: 1rem;
+        margin-top: 30rem;
+    }
+
+    /*--GALLERY SECTION--*/
+    .Gallery-Wrapper h2{
+        font-size: 2rem;
+    }
+
+    /*--ACHIEVEMENT SECTION--*/
+    .Achievement-Wrapper .Outer-div{
+    flex-direction: column;
+    }
+}
+/* #endregion */
+/* #endregion */
+
+
+
